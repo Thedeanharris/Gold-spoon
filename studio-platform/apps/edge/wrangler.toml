@@ -1,0 +1,17 @@
+name = "studio-edge"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[[kv_namespaces]]
+binding = "TENANTS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[[r2_buckets]]
+binding = "SITES"
+bucket_name = "studio-sites"
+
+[vars]
+BASE_DOMAIN = "sites.example.com"
+
+# Secrets, set with `wrangler secret put NAME`:
+# SUPABASE_URL, SUPABASE_SERVICE_KEY, GOOGLE_PLACES_KEY, TURNSTILE_SECRET
