@@ -14,6 +14,7 @@ A website builder and client portal for a studio that sells managed websites to 
 |---|---|---|
 | `packages/sitegen` | The site generator taken from the prototype. Draft in, HTML out. | Tested |
 | `packages/publisher` | Publish and pause steps with injected I/O. | Tested |
+| `packages/trading-bot` | Conservative OHLCV setup classifier, paper/backtest runner and demo-guarded MT5 adapter. | Tested; paper-first |
 | `apps/edge` | Cloudflare Worker that serves sites, takes leads, proxies Google reviews and answers licence checks. | Tested with mocks |
 | `supabase/migrations` | Tables, row level security and triggers. | Written, not yet run against a database |
 | `apps/web` | Next.js app for the studio console and client portal. | Thin scaffold, not yet built |
@@ -25,6 +26,8 @@ A website builder and client portal for a studio that sells managed websites to 
 node --version      # 22 or newer
 npm test            # runs every test, no install needed
 ```
+
+The isolated trading-bot package documents CSV simulation and the optional demo-only Exness MT5 adapter in `packages/trading-bot/README.md`. It does not claim profitability.
 
 ## Put it on GitHub
 
