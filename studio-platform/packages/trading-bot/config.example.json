@@ -1,0 +1,60 @@
+{
+  "execution": {
+    "mode": "paper",
+    "liveEnabled": false,
+    "provider": "mt5",
+    "allowedAccountId": ""
+  },
+  "mt5": {
+    "expectedDemoServer": "",
+    "pythonExecutable": "python",
+    "timeframe": "M15",
+    "symbols": {
+      "XAUUSD": "XAUUSD",
+      "BTCUSD": "BTCUSD"
+    },
+    "historyBars": 500,
+    "pollIntervalMs": 5000,
+    "maxSignalAgeSeconds": 900,
+    "limitExpiryBars": 3,
+    "deviationPoints": 20
+  },
+  "strategy": {
+    "fastEma": 20,
+    "slowEma": 50,
+    "minimumTrendStrength": 0.0015,
+    "atrPeriod": 14,
+    "pullbackLookback": 20,
+    "vwapLookback": 20,
+    "volumeLookback": 20,
+    "volumeExpansion": 1.2,
+    "levelToleranceAtr": 0.15,
+    "maximumWickRatio": 0.25,
+    "stopAtrMultiple": 1.5,
+    "structureBufferAtr": 0.2,
+    "minimumRewardRisk": 2
+  },
+  "risk": {
+    "initialBalance": 10000,
+    "riskPerTrade": 0.005,
+    "maximumDailyLoss": 0.015,
+    "maximumLeverage": 1,
+    "maximumOpenPositions": 1,
+    "cooldownBars": 5
+  },
+  "orders": {
+    "entryType": "market",
+    "limitExpiryBars": 3,
+    "feeRate": 0.001,
+    "slippageRate": 0.0005
+  },
+  "time": {
+    "timezone": "UTC",
+    "session": {
+      "start": "00:00",
+      "end": "23:59",
+      "weekdays": [1, 2, 3, 4, 5]
+    },
+    "noTradeWindows": []
+  }
+}
